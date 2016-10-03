@@ -3,8 +3,8 @@
 by George Melidis
 
 Changes
-1. added task (sprite/smith) for sprite images (png, gif)
-2. added task (copy/fonts)  to destinations folder
+ 1. added task (sprite/smith) for sprite images (png, gif)
+ 2. added task (copy/fonts)  to destinations folder
 
 Stack:
  - Gulp 4.0
