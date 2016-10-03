@@ -1,5 +1,10 @@
 #Учебная сборка Loftschool (выпускной проект №1) 
 
+by George Melidis
+
+1. added task (sprite/smith) for sprite images (png, gif)
+2.
+
 Stack:
  - Gulp 4.0
  
