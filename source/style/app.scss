@@ -1,5 +1,42 @@
-body {
-  margin: 0;
+@import "common/variables";
+@import 'common/fonts';
+@import "common/clearfix";
+html, body {
+  height: 100%;
 }
 
+body {
+  margin: 0;
+  font-family: $basefont;
+}
+.container {
+  background: url(../img/water-bgr.png) no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+.fullscreen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: space-between;
+  flex-flow: wrap;
+}
+
+.main_fullscreen {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 @import 'common/greating';
+@import 'blocks/mainbox';
+@import "common/footer";

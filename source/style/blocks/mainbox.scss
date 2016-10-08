@@ -1,0 +1,27 @@
+.mainbox {
+  width: 380px;
+  background: rgba(#122620, 0.6);
+  box-sizing: border-box;
+  padding: 40px;
+}
+.profile {
+  color: #fff;
+  text-align: center;
+  &__avatar_round {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+  }
+  &__name {
+    font-family: $secondfont;
+    font-size: 1.75rem;
+    font-weight: normal;
+  }
+  &__title{
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+}

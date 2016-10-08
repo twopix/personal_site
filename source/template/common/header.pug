@@ -1,14 +1,9 @@
 header.header
     .social
         ul.social__list
-            li.social__vk VK
-            li.social__git Github
-            li.social__lnk LinkedIn
-    nav.menu
-        ul.nav_menu
-            li
-                a Мои работы
-            li
-                a Обо мне
-            li
-                a Блог
+            each social in ['vk', 'fb']
+                li.social__item
+                    a(class=`social__link social__link_${social}` href="#")
+                    img.social__link-pic(src=`/img/icons/${social}.png`)
+
+    +nav('nav', ["Главная","Новости", "Блог"], 0)

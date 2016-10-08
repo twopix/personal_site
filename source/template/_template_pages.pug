@@ -1,5 +1,7 @@
 block variables
 
+include ../template/common/_mixins
+
 doctype html
 html
   head
@@ -24,12 +26,7 @@ html
     <![endif]-->
 
   body
-    .container.fullscreen
-      .wrapper
-        header.header.header_fullscreen
-          .header__auth
-          input.header__auth__btn.fl-right(type="button" name="btn-auth" value="Авторизоваться")
+    include ./common/header
+    block content
 
-        main.main.main_fullscreen
-          block content
-        include ./common/footer
+  include ./common/footer
