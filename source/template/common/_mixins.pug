@@ -5,7 +5,7 @@ mixin nav(className, items, activeItem)
             ul(class=`${className}__list`)
                 each item, ndx in items
                     li(class=`${className}__item` + ((ndx === activeItem) ? `${className}_active` : ""))
-                        a(class=`${className}__link` href='#')= item
+                        a(class=`${className}__link` href=`${item.link}`)= item.title
 
 
 //- Get social links and icons

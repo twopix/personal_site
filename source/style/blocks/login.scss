@@ -1,0 +1,54 @@
+.login__form{
+
+
+  &__input__group {
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    &_icon {
+      height: 45px;
+      background-color: rgba(darkgray, 0.5);
+      @include flexbox(inherit, nowrap, center, center);
+      flex: 1 14%;
+
+      svg {
+        width: 19px;
+        height: 19px;
+      }
+    }
+    &_input {
+      padding-left: 10px;
+      flex: 1 86%;
+    }
+  }
+  &__checkbox__group {
+    margin-bottom: 20px;
+    @include flexbox(inherit,nowrap,center, center);
+
+    &_checkbox {
+      display: none;
+      &:checked + .login__form__checkbox__group_label {
+        &:before {
+          background-position: -22px 0px;
+        }
+      }
+    }
+    &_label {
+      cursor: pointer;
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        vertical-align: middle;
+        margin-right: 10px;
+        background-image: url(../img/sprite.png);
+        background-position: 0px 0px;
+
+      }
+    }
+
+
+  }
+}
