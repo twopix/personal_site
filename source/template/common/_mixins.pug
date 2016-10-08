@@ -1,3 +1,4 @@
+//- Navigation menu
 mixin nav(className, items, activeItem)
     nav(class=`${className}`)
         .container
@@ -5,3 +6,18 @@ mixin nav(className, items, activeItem)
                 each item, ndx in items
                     li(class=`${className}__item` + ((ndx === activeItem) ? `${className}_active` : ""))
                         a(class=`${className}__link` href='#')= item
+
+
+//- Get social links and icons
+mixin social(className, items)
+    ul(class=`${className}__list`)
+        each item in items
+            li(class=`${className}__icon`)
+                a(class=`${className}__link` href=`${item.link}` title=`${item.title}` target='_blank')
+                    +icon(`${item.icon}`)
+
+//- getting icons from svg sprite
+mixin icon(name, mods)
+    - mods = mods || ''
+    svg(class="icon icon-" + name class=mods)
+        use(xlink:href="/assets/img/sprite.svg#" + name)

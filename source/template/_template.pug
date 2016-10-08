@@ -1,3 +1,5 @@
+include ./common/data
+include ./common/_mixins
 block variables
 
 doctype html
@@ -27,8 +29,8 @@ html
     .container.fullscreen
       .wrapper
         header.header.header_fullscreen
-          .header__auth
-          input.header__auth__btn.fl-right(type="button" name="btn-auth" value="Авторизоваться")
+          .header__auth.clearfix
+            input.header__auth__btn.fl-right(type="button" name="btn-auth" value=`${usrData.profileAuth}`)
 
         main.main.main_fullscreen
           block content

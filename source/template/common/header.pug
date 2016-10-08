@@ -4,6 +4,6 @@ header.header
             each social in ['vk', 'fb']
                 li.social__item
                     a(class=`social__link social__link_${social}` href="#")
-                    img.social__link-pic(src=`/img/icons/${social}.png`)
+                    svg.social__link-pic(src=`/img/icons/${social}.png`)
 
     +nav('nav', ["Главная","Новости", "Блог"], 0)

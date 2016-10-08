@@ -1,7 +1,9 @@
-section.mainbox.profile
-    .profile__avatar_round
-        img(src="./assets/img/george-melidis.jpg").profile__avatar__pic
-    h1.profile__name Юрий Мелидис
-    h2.profile__title Личный сайт разработчика
-    .profile__socials
-
+section.profile
+    .mainbox
+        .profile__avatar_round
+            img(src=`${usrData.profileImg}`).profile__avatar__pic
+        h1.profile__name= usrData.profileName
+        h2.profile__title= usrData.profileTitle
+        +social('profile__socials', usrData.profileSocials)
+    .mainbox_footer
+        +nav('profile__menu', ["Мои работы", "Обо мне", "Блог"], 10)

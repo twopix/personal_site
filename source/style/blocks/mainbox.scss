@@ -6,6 +6,8 @@
 }
 .profile {
   color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
   text-align: center;
   &__avatar_round {
     width: 140px;
@@ -23,5 +25,35 @@
     font-size: 1rem;
     font-weight: normal;
   }
+  &__socials__list{
+    @include flexbox(row,nowrap,center,center);
+  }
+  &__socials__icon{
+    margin: 0 6px;
+  }
+  &__menu__list {
+    @extend .flx;
+    @include flexbox(row,nowrap, space-around, center );
+  }
+  &__menu__item {
+    flex-grow: 1;
+    border-right: 2px solid rgba($basefontColor, 0.7);
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  &__menu__link {
+    font-family: $secondfont;
+    line-height: 45px;
+    color: $basefontColor;
+    width: 100%;
+    display: inline-block;
+    background: rgba($firstColor,0.85);
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: rgba($secondColor, 0.85);
+    }
+  }
+
 
 }
