@@ -1,6 +1,6 @@
 .login__form{
 
-
+  // Login and passwords
   &__input__group {
     margin-bottom: 20px;
     border-radius: 20px;
@@ -22,6 +22,8 @@
       flex: 1 86%;
     }
   }
+
+  //checkboxex Я человек
   &__checkbox__group {
     margin-bottom: 20px;
     @include flexbox(inherit,nowrap,center, center);
@@ -36,19 +38,39 @@
     }
     &_label {
       cursor: pointer;
-      &::before {
-        content: '';
-        display: inline-block;
-        width: 22px;
-        height: 22px;
-        vertical-align: middle;
-        margin-right: 10px;
-        background-image: url(../img/sprite.png);
-        background-position: 0px 0px;
+      &:before {
+      @include formSelectors(0,0);
 
       }
     }
+  }
+  // Вы точно не робот?
+  &__question {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
 
+  // Да */ Нет radio buttons
+  &__radio_list {
+    @include flexbox(row,nowrap, center, center );
+
+    &_item:first-child {
+      margin-right: 20px;
+    }
+    &_input {
+      display: none;
+      &:checked + .login__form__radio_list_label{
+        &:before {
+          background-position: -22px -22px;
+        }
+      }
+    }
+    &_label {
+      cursor: pointer;
+      &:before {
+        @include formSelectors(0, -22px);
+      }
+    }
 
   }
 }

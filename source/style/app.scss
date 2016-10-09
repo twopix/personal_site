@@ -1,9 +1,20 @@
+@import "../../bower_components/singularity/stylesheets/singularitygs";
+@import "../../bower_components/breakpoint-sass/stylesheets/breakpoint";
 @import "common/variables";
 @import "common/_mixins.scss";
 @import 'common/fonts';
 @import "common/clearfix";
+
+//@include sgs-change('debug', true);
+@include add-grid(12);
+@include add-gutter(1/3);
+@include add-gutter-style('split');
+
+
+
 html, body {
   height: 100%;
+  font-size: 16px;
 }
 
 body {
@@ -38,10 +49,11 @@ a {
 }
 
 .container {
+  @include background-grid($color: blue);
   position: relative;
 }
 .fullscreen {
-  width: 1200px;
+  min-width: 1200px;
   height: 100%;
   margin: 0 auto;
 }
@@ -59,5 +71,5 @@ a {
 
 @import "blocks/header";
 @import 'blocks/mainbox';
-@import "blocks/login";
+@import "blocks/auth";
 @import "common/footer";

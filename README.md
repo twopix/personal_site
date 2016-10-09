@@ -1,5 +1,6 @@
 #Учебная сборка Loftschool (выпускной проект №1) 
 
+Personal webpage using LoftSchool's course
 by George Melidis
 
 Changes
@@ -17,3 +18,6 @@ Getting started:
 3. npm install gulpjs/gulp-cli -g  // Install the latest Gulp CLI tools globally
 4. npm install
 6. run "gulp" command to start
+
+
+URL: [www.twopix.org](http://www.twopix.gr)

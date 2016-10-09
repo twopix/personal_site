@@ -1,0 +1,29 @@
+form
+    .mainbox.login
+        h1.login__title.page__title= usrData.authorize
+        form.login__form
+
+            .login__form__input__group.flx.clearfix
+                span.login__form__input__group_icon
+                    +icon('login')
+                input(type='text' placeholder=`${usrData.login}`).login__form__input__group_input
+
+            .login__form__input__group.flx.clearfix
+                span.login__form__input__group_icon
+                    +icon('password')
+                input(type='password' placeholder=`${usrData.password}`).login__form__input__group_input
+
+            .login__form__checkbox__group.clearfix
+                input(type='checkbox').login__form__checkbox__group_checkbox#checkbox
+                label(for='checkbox').login__form__checkbox__group_label= usrData.iHuman
+            .login__form__question= usrData.areYouHuman
+            .login__form__radio__group
+                ul.login__form__radio_list
+                    li.login__form__radio_list_item
+                        input(type='radio' name='radio-robot').login__form__radio_list_input#rd-yes
+                        label(for='rd-yes').login__form__radio_list_label= usrData.yes
+                    li.login__form__radio_item
+                        input(type='radio' name='radio-robot').login__form__radio_list_input#rd-no
+                        label(for='rd-no').login__form__radio_list_label= usrData.no
+    .mainbox_footer
+        +nav('profile__menu', usrData.authMenu, 10)
