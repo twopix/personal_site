@@ -17,3 +17,7 @@
   background-image: url(../img/sprite.png);
   background-position: $x $y;
 }
+
+@mixin svgBgr($name) {
+  background-image: url(../img/sprite.svg##{$name});
+}

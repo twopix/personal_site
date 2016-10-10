@@ -1,0 +1,23 @@
+extends ../_template_pages
+
+block variables
+    - var title = 'Юрий Мелидис | Личный сайт разработчика'
+
+block content
+    section.main.clearfix
+        aside.span3.page_sidebar
+            ul
+                li.menu__item.menu__item--active
+                    a.menu__link(href="#article-1") Самое важное в SASS
+                li.menu__item
+                    a.menu__link(href="#article-2") Приёмы вёрстки, без которых не обходится ни один сайт
+                li.menu__item
+                    a.menu__link(href="#article-3") Самый необходимый набор Gulp плагинов
+                li.menu__item
+                    a.menu__link(href="#article-2") Почему я выбрал Pug
+        section.span8
+            article
+                h3 section test
+    //.container2
+    //    .span3.indent1 span3
+    //    .span8 span8

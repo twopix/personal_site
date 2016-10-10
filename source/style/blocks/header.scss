@@ -1,3 +1,43 @@
+.header {
+
+  &__page {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.36)), url(../img/water-bgr.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    //height: 32vh; enable after
+    overflow: hidden;
+  }
+  &__top {
+    margin: 1.3rem 1rem;
+  }
+  &__main {
+    &:before {
+      content: "";
+      position: absolute;
+      background: url(../img/blog_header.svg) no-repeat;
+      top: 14rem;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.10;
+      width: 300px;
+      height: 210px;
+    }
+  }
+  &__footer {
+    background: url('../img/bg.svg') top no-repeat;
+    background-size: cover;
+    height: 28vh;
+    position: relative;
+
+    &_btn-down {
+      position: absolute;
+      left: 50%;
+      top: 5rem;
+      transform: translateX(-50%);
+    }
+  }
+}
 .header__auth__btn {
   color: white;
   background-color: transparent;
@@ -12,4 +52,19 @@
     border-color: $colorActive;
     background-color: $colorActive;
   }
+}
+.container2 {
+  @include breakpoint($laptop) {
+    background: #000;
+  };
+  height:100px;
+  @include background-grid($color: blue);
+}
+.span3{
+  background: red;
+  @include grid-span(3);
+}
+.span8 {
+  background: green;
+  @include  grid-span(8,5);
 }

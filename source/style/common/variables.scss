@@ -1,7 +1,20 @@
-//colors
+// fonts
 $basefont: "Roboto Regular", sans-serif;
-$basefontColor: #fff;
 $secondfont: "Roboto Medium", sans-serif;
-$colorActive: #4e8839;
-$firstColor: #6c9c5a;
-$secondColor: #4e8839;
+$titlefont: "Sansus Webissimo Regular", sans-serif;
+
+//colors
+$bgcolor:       #fbf8f1;
+$basefontColor: #fff;
+$colorActive:   #4e8839;
+$firstColor:    #6c9c5a;
+$secondColor:   #4e8839;
+$titleColor:    #fff;
+
+//mediaqueryies
+$desktop: 1200px;
+$laptop:  992px;
+$tablet: 768px;
+$mobile: 480px;
+//set to desktop first!
+@include breakpoint-set('default feature', max-width);

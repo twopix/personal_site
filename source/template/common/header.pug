@@ -1,9 +1,17 @@
-header.header
-    .social
-        ul.social__list
-            each social in ['vk', 'fb']
-                li.social__item
-                    a(class=`social__link social__link_${social}` href="#")
-                    svg.social__link-pic(src=`/img/icons/${social}.png`)
+.preloader
 
-    +nav('nav', ["Главная","Новости", "Блог"], 0)
+header.header.header__page
+    .header__top.clearfix
+        .header__socials.fl-left
+            +social('profile__socials', usrData.profileSocials)
+        .header__menu.fl-right
+            +nav('mainmenu', usrData.profileMenu,0)
+    .header__main
+        .profile__avatar_round
+            img(src=`${usrData.profileImg}`).profile__avatar__pic
+        h1.page__title= usrData.pagesTitles.blog
+        h3.page__subtitle= usrData.pagesTitles.blogSbt
+    .header__footer.clearfix
+        span.header__footer_btn-down
+            a(href="#main").page__next_btn
+                +icon('portf_arrow_down')
