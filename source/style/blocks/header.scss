@@ -53,18 +53,4 @@
     background-color: $colorActive;
   }
 }
-.container2 {
-  @include breakpoint($laptop) {
-    background: #000;
-  };
-  height:100px;
-  @include background-grid($color: blue);
-}
-.span3{
-  background: red;
-  @include grid-span(3);
-}
-.span8 {
-  background: green;
-  @include  grid-span(8,5);
-}
+

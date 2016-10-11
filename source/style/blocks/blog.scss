@@ -1,0 +1,19 @@
+.blog__menu__item{
+  font-weight: bold;
+  color: $textColor;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-right: 2px solid transparent;
+
+  &--active {
+    border-right: 2px solid $colorActive;
+  }
+}
+
+.blog__menu__link {
+  color: inherit;
+
+  &:hover {
+    color: $colorActive;
+  }
+}

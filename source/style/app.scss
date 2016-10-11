@@ -22,6 +22,7 @@ body {
   margin: 0;
   font-family: $basefont;
   font-size: 16px;
+  color: $textColor;
 }
 h1,h2,h3,h4,h5 {
   margin: 0;
@@ -34,6 +35,9 @@ ol, ul {
 a {
   text-decoration: none;
 }
+p {
+  line-height: 1.3rem;
+}
 .flx {
   @include flexbox();
 }
@@ -42,6 +46,9 @@ a {
 }
 .fl-left {
   float: left;
+}
+.tx-right {
+  text-align: right;
 }
 .icon {
   width: 35px;
@@ -79,6 +86,13 @@ a {
   width: 100%;
   @include  flexbox($jcontent: center, $align: center)
 }
+.span3{
+  @include grid-span(3);
+}
+.span8 {
+  @include  grid-span(8,5);
+}
+
 .page__title {
   position: relative;
   font: 3.93rem/7rem $titlefont;
@@ -105,4 +119,6 @@ a {
 @import "blocks/header";
 @import 'blocks/mainbox';
 @import "blocks/auth";
+@import "blocks/blog";
 @import "common/footer";
+@import "common/preloader";
