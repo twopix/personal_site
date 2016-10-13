@@ -27,7 +27,7 @@ body {
 h1,h2,h3,h4,h5 {
   margin: 0;
 }
-ol, ul {
+ol, ul, blockquote {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -60,7 +60,6 @@ p {
     fill: rgba($colorActive, 1);
   }
 }
-
 .container {
   //@include background-grid($color: blue);
   position: relative;
@@ -91,6 +90,17 @@ p {
 }
 .span8 {
   @include  grid-span(8,5);
+}
+
+@include add-gutter(0);
+.span4 {
+  @include grid-span(4);
+}
+.span4_5 {
+  @include grid-span(4,5);
+}
+.span4_8 {
+  @include grid-span(4,9);
 }
 
 .page__title {

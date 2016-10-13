@@ -1,17 +1,64 @@
 footer {
   width: 100%;
-  &.footer {
-    height: 80px;
+  .footer {
     display: flex;
+    height: 80px;
     align-items: center;
     justify-content: center;
+
   }
 
   .footer_copyright {
     color: #fff;
     text-align: center;
+    line-height: 2.375rem;
+  }
+}
+.main__page__footer {
+  color: $basefontColor;
+  padding: 2rem 0;
+  background-color: rgba($footerbgColor, 0.85);
+  &_col {
+    padding: 0 2rem;
+  }
+  .profile__socials__list {
+    justify-content: flex-start;
+  }
+}
+.span4_5 .main__page__footer_col {
+  border-left: 1px solid $basefontColor;
+  border-right: 1px solid $basefontColor;
+}
+.footermenu {
+  font-family: $secondfont;
+  &__list {
+    margin-bottom: 1rem;
+    margin-left: 0.375rem;
+  }
+  &__item {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  &__link {
+    color: $basefontColor;
+    text-decoration: none;
+  }
+}
+.footer__siteabout {
+  font: 1rem/1.55rem $basefontLight;
+  padding: 0 1rem;
+}
+.footer__quote {
+  font-family: $basefontLight;
+  font-style: italic;
+  line-height:1.5rem;
+
+  &_author {
+    font-weight: bold;
   }
 }
 .page .footer{
-  background-color: $secondColor;
+  height: inherit;
+  background-color: rgba($secondColor, 0.85);
 }
+

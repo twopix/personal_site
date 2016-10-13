@@ -1,6 +1,8 @@
 // fonts
 $basefont: "Roboto Regular", sans-serif;
 $secondfont: "Roboto Medium", sans-serif;
+$basefontBold: "Roboto Bold", sans-serif;
+$basefontLight: "Roboto Light", sans-serif;
 $titlefont: "Sansus Webissimo Regular", sans-serif;
 
 //colors
@@ -11,13 +13,15 @@ $colorActive:   #4e8839;
 $firstColor:    #6c9c5a;
 $secondColor:   #4e8839;
 $titleColor:    #fff;
+$footerbgColor: #373e42;
 
 
 
-//mediaqueryies
+//mediaqueries
 $desktop: 1200px;
 $laptop:  992px;
 $tablet: 768px;
 $mobile: 480px;
+
 //set to desktop first!
 @include breakpoint-set('default feature', max-width);

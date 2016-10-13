@@ -1,10 +1,17 @@
 footer
-    .main__page__footer.clearfix
-        .span3 test
-        .span3 test2
-        .span3  tesa33
-
-
+    if (!HOMEPAGE)
+        .main__page__footer.clearfix
+            .col.span4
+                .main__page__footer_col
+                    .footer__siteabout Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+            .col.span4_5
+                .main__page__footer_col
+                    +nav('footermenu', usrData.profileMenu,10)
+                    +social('profile__socials', usrData.profileSocials)
+            .col.span4_8
+                .main__page__footer_col
+                    blockquote.footer__quote Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+                        footer.footer__quote_author - Martin Golding
     .footer
         .footer_copyright © Юрий Мелидис | Создано с любовью в LoftSchool | 2016
 
