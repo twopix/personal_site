@@ -6,6 +6,29 @@
   //   document.querySelector('.greating_picture').classList.add('m--show');
   // }, 1000);
   //
+
+  //topmenu
+  $('.header__menu_top').click(function(){
+    $(this).toggleClass('open');
+  });
+
+  // blog smooth scroll
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+
+
+
+  //preloader
   var imgs = [];
   $.each($('*'), function () {
      var
