@@ -12,10 +12,9 @@
     margin: 1.3rem 1rem;
   }
   &__menu_top {
-    width: 60px;
-    height: 45px;
+    width: 2.5rem;
+    height: 2.1875rem;
     position: relative;
-    margin: 50px auto;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer;
@@ -23,10 +22,10 @@
     span {
       display: block;
       position: absolute;
-      height: 9px;
+      height: 0.312rem;
       width: 100%;
-      background: #d3531a;
-      border-radius: 9px;
+      background: $titleColor;
+      border-radius: 0.312rem;
       opacity: 1;
       left: 0;
       transform: rotate(0deg);
