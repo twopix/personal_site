@@ -105,10 +105,9 @@ p {
 
 .page__title {
   position: relative;
-  font: 3.93rem/7rem $titlefont;
+  font: 2.93rem/5rem $titlefont;
   text-align: center;
   color: $titleColor;
-  font-size: 3.93rem;
   text-transform: uppercase;
   &:after {
     content: '';

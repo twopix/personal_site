@@ -83,7 +83,7 @@
         btnAuth = $('#btn-auth'),
         profileHome = $('.profile__home'),
         profileLogin = $('.profile__login'), 
-        sbmit = $('#submit');
+        goHome= $('#goHome');
 
 
     if (homeBlock == null) return;
@@ -93,7 +93,7 @@
       e.preventDefault();
       flip();
     });
-    sbmit.on('click', function (e) {
+    goHome.on('click', function (e) {
       e.preventDefault();
       flip();
     });
