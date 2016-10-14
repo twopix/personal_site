@@ -4,6 +4,8 @@ block variables
   - var title = 'Юрий Мелидис | Личный сайт разработчика'
 
 block content
-  section.profile
-    //include ../blocks/_auth
-    include ../blocks/_mainbox
+  section.profile#homeBlock
+    .profile__home
+      include ../blocks/_mainbox
+    .profile__login
+      include ../blocks/_auth

@@ -7,8 +7,33 @@
 .profile {
   color: #fff;
   border-radius: 5px;
-  overflow: hidden;
+  width: 380px;
+  min-height: 380px;
+  //overflow: hidden;
   text-align: center;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .6s;
+
+  &--flip {
+    transform: rotateY(180deg);
+  }
+
+
+  &__home {transform: rotateY(0deg);}
+  &__login {transform: rotateY(180deg);}
+  &__home, &__login {
+    display: block;
+    position: absolute;
+    transition: opacity .5s;
+    //overflow: hidden;
+    backface-visibility: hidden;
+  }
+
+
+
+
+
   &__avatar_round {
     width: 140px;
     height: 140px;

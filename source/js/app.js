@@ -74,4 +74,47 @@
     $('.preloader__percents').text(percents + '%') ;
   }
 
+  
+  
+//  welcome flipper
+  (function () {
+
+    var homeBlock = $('#homeBlock'),
+        btnAuth = $('#btn-auth'),
+        profileHome = $('.profile__home'),
+        profileLogin = $('.profile__login'), 
+        sbmit = $('#submit');
+
+
+    if (homeBlock == null) return;
+
+
+    btnAuth.on('click', function (e) {
+      e.preventDefault();
+      flip();
+    });
+    sbmit.on('click', function (e) {
+      e.preventDefault();
+      flip();
+    });
+
+
+    function flip() {
+      if(homeBlock.hasClass('profile--flip')) {
+        btnAuth.fadeIn();
+        // btnAuth.style.pointerEvents = 'auto';
+        homeBlock.removeClass('profile--flip');
+        profileHome.addClass('profile--back');
+      } else {
+        btnAuth.fadeOut();
+        //btnAuth.style.pointerEvents = 'none';
+        homeBlock.addClass('profile--flip');
+        profileLogin.addClass('profile--back');
+
+      }
+    }
+
+  })();
+
+
 })();
