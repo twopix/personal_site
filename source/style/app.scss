@@ -23,8 +23,11 @@ body {
   font-family: $basefont;
   font-size: 16px;
   color: $textColor;
-  background: url(../img/water-bgr.png) no-repeat center;
-  background-size: cover;
+
+  &.homepage {
+    background: url(../img/water-bgr.png) no-repeat center;
+    background-size: cover;
+  }
 }
 h1,h2,h3,h4,h5 {
   margin: 0;
