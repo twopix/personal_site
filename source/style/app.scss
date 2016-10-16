@@ -27,6 +27,7 @@ body {
   &.homepage {
     background: url(../img/water-bgr.png) no-repeat center;
     background-size: cover;
+    overflow: hidden;
   }
 }
 h1,h2,h3,h4,h5 {
