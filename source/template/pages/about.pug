@@ -1,7 +1,37 @@
-extends ../_template
+extends ../_template_pages
 
 block variables
     - var title = 'Another page'
 
 block content
-    h1 It's some another page
+    .row.clearfix
+        section.span6.about__me
+            .about__me__section
+                h1.page__title.page__title_black= usrData.pagesTitles.about
+                svg.about__me__title_bgr
+                    use(xlink:href="/assets/img/sprite.svg#about_header")
+                .about__me__pic.center
+                    img(src="assets/img/george-melidis.jpg" alt=`${usrData.profileName}` title=`${usrData.profileName}` )
+                h3.section__title= usrData.pagesTitles.whoiam
+                p
+                    | Я веб разработчик из г. Салоники, Греция. Мне 35 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                p
+                    | Этот сайт сделан в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока смотрите, как тут всё классно и красиво!
+
+        section.span6_7.about__canihelp
+                h3.section__title= usrData.pagesTitles.canihelp
+                p loremipsum
+                .charts Frontend
+                .charts Backend
+                .charts WorkFlow
+    .row.clerfix
+    section.about__contacts
+        .contact__box
+            h3.section__title
+            address.about__contacts
+                a.about__me_skype= usrData.pagesTitles.contacts.skype
+                a.about__me_mail= usrData.pagesTitles.contacts.mail
+                a.about__me_phone= usrData.pagesTitles.contacts.phone
+                a.about__me_address= usrData.pagesTitles.contacts.address
+
+        .map#gmap

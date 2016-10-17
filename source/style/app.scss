@@ -15,7 +15,7 @@
 html, body {
   height: 100%;
   font-size: 16px;
-  background-color: $bgcolor;
+  //background-color: $bgcolor; // check with left background bug
 }
 
 body {
@@ -97,6 +97,15 @@ p {
   @include  grid-span(8,5);
 }
 
+// for the aboutme section
+.span6 {
+  @include grid-span(6)
+}
+.span6_7{
+  @include grid-span(6,7)
+}
+
+//for the blog section
 @include add-gutter(0);
 .span4 {
   @include grid-span(4);
@@ -110,7 +119,7 @@ p {
 
 .page__title {
   position: relative;
-  font: 2.93rem/5rem $titlefont;
+  font: 4.23rem/5rem $titlefont;
   text-align: center;
   color: $titleColor;
   text-transform: uppercase;
@@ -124,11 +133,38 @@ p {
     height: 2px;
     background-color: $titleColor;
   }
+  &_black {
+    color:$SctnTxtColor;
+    margin-bottom: 1.5rem;
+    &:after{
+      background-color: $SctnTxtColor;
+    }
+  }
 }
 .page__subtitle {
   text-align: center;
   font: 1rem/4rem $basefont;
   color:  $titleColor;
+}
+.section__title {
+  font: 2.187rem/3rem  $titlefont;
+  position: relative;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: $SctnTxtColor;
+
+  &::after {
+    content: "";
+    position: relative;
+    left: 50%;
+    display: block;
+    overflow: hidden;
+    width: 5.625rem;
+    height: .187rem;
+    margin: 0.5rem auto 0 (-5.625rem)/2;
+    background-color: CurrentColor;
+  }
 }
 @import "blocks/header";
 @import 'blocks/mainbox';
