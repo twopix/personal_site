@@ -58,7 +58,11 @@ body {
     }
 
   }
+  &__canihelp {
+    padding: 0 1.4rem;
+  }
 }
+
 .about__contacts {
   position: relative;
   @include flexbox(row,nowrap,center,center);
@@ -103,7 +107,7 @@ body {
     position: relative;
     width: 7rem;
     height: 7rem;
-    margin-right: 1.8rem;
+    margin-right: 0.8rem;
     text-align: center;
     font-size: 16px;
     &::after {

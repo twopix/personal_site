@@ -1,0 +1,135 @@
+extends ../_template_pages
+
+block variables
+    - var title = 'Мои работы'
+
+block content
+    .about__me__section
+        h1.page__title.page__title_black.center= usrData.pagesTitles.portfolio
+        svg.about__me__title_bgr
+            use(xlink:href="/assets/img/sprite.svg#works_header")
+    section.section--slider.clearfix
+        .slider#js-slider
+            .slider__desc
+                .slider__desc-in
+                    .slider__title.title Сайт школы онлайн образования
+                    .slider__info HTML, CSS, JavaScript
+
+                    a.slider__link.btn(href="#404"  target="_blank")
+                        i.btn__icon.fa.fa-link
+                        span.btn__text Посмотреть сайт
+
+
+            .slider__view
+                ul.slider__slides.slides
+                    li.slides__item.slides__item--active
+                        img(src="assets/userfiles/work-1.png"  alt="")
+                    li.slides__item
+                        img(src="assets/userfiles/work-2.png"  alt="")
+                    li.slides__item
+                        img(src="assets/userfiles/work-3.png"  alt="")
+
+
+            .slider__controls
+                a.slider__control.slider__control--prev(href="#404"  title="Предыдущий проект")
+                    ul.slider__slides.slides
+                        li.slides__item
+                            img(src="assets/userfiles/work-1.png"  alt="")
+                        li.slides__item
+                            img(src="assets/userfiles/work-2.png"  alt="")
+                        li.slides__item
+                            img(src="assets/userfiles/work-3.png"  alt="")
+
+                a.slider__control.slider__control--next(href="#404"  title="Следующий проект")
+                    ul.slider__slides.slides
+                        li.slides__item
+                            img(src="assets/userfiles/work-1.png"  alt="")
+                        li.slides__item
+                            img(src="assets/userfiles/work-2.png"  alt="")
+                        li.slides__item
+                            img(src="assets/userfiles/work-3.png"  alt="")
+
+                ul.slider__data.slider-data
+                    li.slider-data__item(
+                    data-title="Название 1"
+                    data-tools="HTML, CSS, JavaScript"
+                    data-link="#1"
+                    )
+                    li.slider-data__item(
+                    data-title="Название 2"
+                    data-tools="HTML, CSS, JavaScript, PHP, MySQL"
+                    data-link="#2"
+                    )
+                    li.slider-data__item(
+                    data-title="Название 3"
+                    data-tools="HTML, CSS, JavaScript, NODE.js, MongoDB"
+                    data-link="#3"
+                    )
+    section.testinmonials
+        .section__bg(data-blur-container="form")
+        .section__body
+            .testimonials_title.double-title
+                .double-title__text.title Что обо мне говорят
+                svg.double-title__bg.double-title__bg--lg
+                    use(xlink:href='assets/img/sprite.svg#about_header')
+
+            //Testimonials
+            .testimonials_line.testimonials_testimonials-wrap
+                .testimonials
+                    .testimonials__item
+                        .testimonial__content
+                            p Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+                        .testimonial__info
+                            .testimonial__avatar(style="background-image: url(assets/userfiles/user-ava-1.jpg);")
+                            .testimonial__info-who
+                                .testimonial__name Ковальчук Дмитрий
+                                .testimonial__desc основатель Loftchool
+
+                    .testimonials__item
+                        .testimonial__content
+                            p Этот код выдержет любые испытания. Только, пожалуйста, не загружйте сайт в слишком старых браузерах!
+                        .testimonial__info
+                            .testimonial__avatar(style="background-image: url(assets/userfiles/user-ava-2.jpg);")
+                            .testimonial__info-who
+                                .testimonial__name Зар Захаров
+                                .testimonial__desc главный преподаватель
+
+
+
+            .section__line.mainbox
+                form.form-modal.form-modal--callback(name="callback")
+                    .form-modal__blur(data-blur-elem="form")
+
+                    .form-modal__body
+                        .title.form-modal__title Связаться со мной
+
+                        .form-row
+                            input.field.field--full(
+                            type="text"
+                            name="name"
+                            placeholder="Имя"
+                            required
+                            )
+
+                        .form-row
+                            input.field.field--full(
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                            )
+
+                        .form-row
+                            textarea.field.field--full(
+                            name="message"
+                            placeholder="Ваше сообщение"
+                            required
+                            pattern="^.{8,100}$"
+                            )
+
+                    .form-modal__foot.btn-group.btn-group--equal
+                        .btn-group__item
+                            button.btn.btn--crystal.btn-group__btn(type="submit") Отправить
+                        .btn-group__item
+                            button.btn.btn--crystal.btn-group__btn(type="reset") Очистить
+

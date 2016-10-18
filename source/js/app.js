@@ -204,7 +204,7 @@
       "stylers": [
         {
           "color": "#6c9c5a"
-        },
+        },  
         {
           "visibility": "on"
         }
