@@ -1,13 +1,7 @@
+
+// Topmenu
 (function() {
   'use strict';
-
-  // not used
-  // setTimeout(function() {
-  //   document.querySelector('.greating_picture').classList.add('m--show');
-  // }, 1000);
-  //
-
-  //topmenu
   $('.header__menu_top').click(function () {
     $(this).toggleClass('open');
   });
@@ -25,19 +19,22 @@
       }
     }
   });
+})();
 
-
-  //preloader
+  // Preloader
+(function () {
+  'use strict';
   var imgs = [];
   $.each($('*'), function () {
     var
       $this = $(this),
       background = $this.css('background-image'),
       img = $this.is('img');
-    if (background != 'none') {
-      var path = background.replace('url("', '').replace('")', '');
+    if (background.match(/url(.+)/)) {
+        var regex = background.match(/url(.+)/);
+        var path = regex[0].replace('url("', '').replace('")', '');
+        imgs.push(path);
 
-      imgs.push(path);
     }
 
     if (img) {
@@ -64,7 +61,7 @@
 
   }
 
-  function setPersents(total, current) {
+  function setPersents(current, total) {
     var percents = Math.ceil(current / total * 100);
     if (percents >= 100) {
       $('.preloader').fadeOut();
@@ -72,7 +69,7 @@
 
     $('.preloader__percents').text(percents + '%');
   }
-
+})();
 
 //  welcome flipper
   (function () {
@@ -114,7 +111,7 @@
 
   })();
 
-})();
+
 
 
 // Карта
