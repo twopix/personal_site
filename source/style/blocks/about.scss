@@ -74,6 +74,15 @@ body {
   margin-left: -110px;
   margin-top: -80px;
 }
+.contacts__link {
+  font: 1rem/2rem $secondfont;
+  text-decoration: none;
+  color: $SctnTxtColor;
+}
+.contacts__icon {
+  color: $firstColor;
+  margin-right: 0.45rem;
+}
 #gmap {
   height: 100vh;
   width: 100%;

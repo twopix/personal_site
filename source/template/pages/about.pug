@@ -31,22 +31,11 @@ block content_footer
             h3.section__title= usrData.pagesTitles.contact
             address.about__contacts
                 ul.contacts__list
-                    //use foreach////////////////////////
-                    li.contacts__item
-                        i.contacts__icon.fa.fa-skype
-                        span.contacts__text= usrData.contacts.skype
-
-                    li.contacts__item
-                        i.contacts__icon.fa.fa-envelope
-                        span.contacts__text= usrData.contacts.mail
-
-                    li.contacts__item
-                        i.contacts__icon.fa.fa-phone
-                        span.contacts__text= usrData.contacts.phone
-
-                    li.contacts__item
-                        i.contacts__icon.fa.fa-map-marker
-                        span.contacts__text= usrData.contacts.address
+                    each item in usrData.contacts
+                        li.contacts__item
+                            a(href=`${item.link}`).contacts__link
+                                i(class=`contacts__icon fa fa-${item.type}`)
+                                span.contacts__text= item.name
     .map#gmap
 
 block scripts
