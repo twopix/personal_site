@@ -21,3 +21,10 @@ mixin icon(name, mods)
     - mods = mods || ''
     svg(class="icon icon-" + name class=mods)
         use(xlink:href="/assets/img/sprite.svg#" + name)
+
+//- pie chart
+mixin chart-pie(skill, name)
+    li(data-name=`${name}`).skill__chart_item
+        svg.skill__chart_pie(stroke-dasharray=`${skill} 100`  viewbox="0 0 32 32")
+            circle.skill__chart__cicle_bg(r="16" cx="16"  cy="16")
+            circle.skill__chart__cicle_stroke(r="16" cx="16" cy="16")

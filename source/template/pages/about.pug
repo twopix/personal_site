@@ -19,11 +19,25 @@ block content
                     | Этот сайт сделан в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока смотрите, как тут всё классно и красиво!
 
         section.span6_7.about__canihelp
-                h3.section__title= usrData.pagesTitles.canihelp
-                p loremipsum
-                .charts Frontend
-                .charts Backend
-                .charts WorkFlow
+            h3.section__title= usrData.pagesTitles.canihelp
+            p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+            .charts
+                h4.skill Frontend
+                ul.skill__chart
+                    +chart-pie(90, 'HTML5')
+                    +chart-pie(90, 'CSS3')
+                    +chart-pie(90, 'JavaScript & jQuery')
+                h4.skill Backend
+                ul.skill__chart
+                    +chart-pie(60, 'PHP')
+                    +chart-pie(100, 'mySQL')
+                    +chart-pie(30, 'Node.js & npm')
+                    +chart-pie(30, 'Mongo.db')
+                h4.skill WorkFlow
+                ul.skill__chart
+                    +chart-pie(60, 'Git')
+                    +chart-pie(100, 'Gulp')
+                    +chart-pie(30, 'Bower')
     .row.clerfix
 block content_footer
     section.about__contacts
