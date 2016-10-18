@@ -25,13 +25,29 @@ block content
                 .charts Backend
                 .charts WorkFlow
     .row.clerfix
+block content_footer
     section.about__contacts
         .contact__box
-            h3.section__title
+            h3.section__title= usrData.pagesTitles.contact
             address.about__contacts
-                a.about__me_skype= usrData.pagesTitles.contacts.skype
-                a.about__me_mail= usrData.pagesTitles.contacts.mail
-                a.about__me_phone= usrData.pagesTitles.contacts.phone
-                a.about__me_address= usrData.pagesTitles.contacts.address
+                ul.contacts__list
+                    //use foreach////////////////////////
+                    li.contacts__item
+                        i.contacts__icon.fa.fa-skype
+                        span.contacts__text= usrData.contacts.skype
 
-        .map#gmap
+                    li.contacts__item
+                        i.contacts__icon.fa.fa-envelope
+                        span.contacts__text= usrData.contacts.mail
+
+                    li.contacts__item
+                        i.contacts__icon.fa.fa-phone
+                        span.contacts__text= usrData.contacts.phone
+
+                    li.contacts__item
+                        i.contacts__icon.fa.fa-map-marker
+                        span.contacts__text= usrData.contacts.address
+    .map#gmap
+
+block scripts
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBruaTV780QMt_-ihQasYqJ62kdye1ZO-A&callback=initMap")
