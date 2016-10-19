@@ -1,0 +1,21 @@
+.section{
+}
+.works {
+  &__section {
+    position: relative;
+
+    &_slider {
+      height: 100vh;
+      min-height: 600px;
+    }
+  }
+
+  &__title_bgr {
+    transform: translate(-50%, -50%) scale(1.68);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-top: 1rem;
+    fill: rgba(28, 62, 29, 0.12);
+  }
+}

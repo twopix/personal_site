@@ -4,15 +4,15 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    .about__me__section
+    .works__section
         h1.page__title.page__title_black.center= usrData.pagesTitles.portfolio
-        svg.about__me__title_bgr
+        svg.works__title_bgr
             use(xlink:href="/assets/img/sprite.svg#works_header")
-    section.section--slider.clearfix
+    section.works__slider.clearfix
         .slider#js-slider
             .slider__desc
                 .slider__desc-in
-                    .slider__title.title Сайт школы онлайн образования
+                    h3.slider__title.title Сайт школы онлайн образования
                     .slider__info HTML, CSS, JavaScript
 
                     a.slider__link.btn(href="#404"  target="_blank")
@@ -22,7 +22,7 @@ block content
 
             .slider__view
                 ul.slider__slides.slides
-                    li.slides__item.slides__item--active
+                    li.slides__item.slides__item_active
                         img(src="assets/userfiles/work-1.png"  alt="")
                     li.slides__item
                         img(src="assets/userfiles/work-2.png"  alt="")
@@ -31,7 +31,7 @@ block content
 
 
             .slider__controls
-                a.slider__control.slider__control--prev(href="#404"  title="Предыдущий проект")
+                a.slider__control.slider__control_prev(href="#404"  title="Предыдущий проект")
                     ul.slider__slides.slides
                         li.slides__item
                             img(src="assets/userfiles/work-1.png"  alt="")
@@ -40,7 +40,7 @@ block content
                         li.slides__item
                             img(src="assets/userfiles/work-3.png"  alt="")
 
-                a.slider__control.slider__control--next(href="#404"  title="Следующий проект")
+                a.slider__control.slider__control_next(href="#404"  title="Следующий проект")
                     ul.slider__slides.slides
                         li.slides__item
                             img(src="assets/userfiles/work-1.png"  alt="")
@@ -70,7 +70,7 @@ block content
         .section__body
             .testimonials_title.double-title
                 .double-title__text.title Что обо мне говорят
-                svg.double-title__bg.double-title__bg--lg
+                svg.double-title__bg.double-title__bg_lg
                     use(xlink:href='assets/img/sprite.svg#about_header')
 
             //Testimonials
@@ -97,14 +97,14 @@ block content
 
 
             .section__line.mainbox
-                form.form-modal.form-modal--callback(name="callback")
+                form.form-modal.form-modal_callback(name="callback")
                     .form-modal__blur(data-blur-elem="form")
 
                     .form-modal__body
                         .title.form-modal__title Связаться со мной
 
                         .form-row
-                            input.field.field--full(
+                            input.field.field_full(
                             type="text"
                             name="name"
                             placeholder="Имя"
@@ -112,7 +112,7 @@ block content
                             )
 
                         .form-row
-                            input.field.field--full(
+                            input.field.field_full(
                             type="email"
                             name="email"
                             placeholder="Email"
@@ -120,16 +120,16 @@ block content
                             )
 
                         .form-row
-                            textarea.field.field--full(
+                            textarea.field.field_full(
                             name="message"
                             placeholder="Ваше сообщение"
                             required
                             pattern="^.{8,100}$"
                             )
 
-                    .form-modal__foot.btn-group.btn-group--equal
+                    .form-modal__foot.btn-group.btn-group_equal
                         .btn-group__item
-                            button.btn.btn--crystal.btn-group__btn(type="submit") Отправить
+                            button.btn.btn_crystal.btn-group__btn(type="submit") Отправить
                         .btn-group__item
-                            button.btn.btn--crystal.btn-group__btn(type="reset") Очистить
+                            button.btn.btn_crystal.btn-group__btn(type="reset") Очистить
 
