@@ -21,7 +21,41 @@
   });
 })();
 
-  // Preloader
+// main menu
+(function() {
+
+  $(document).on('click', '.header__menu_top', function(e) {
+    var those = $(this);
+    var hMenu     = those.closest('.header__menu');
+    var drop    = hMenu.find('.header__menu-nav');
+    var header  = $('.header');
+
+
+    if(hMenu.hasClass('nav--open')) {
+
+      drop.fadeOut( 500 , function() {
+        hMenu.removeClass('nav--open');
+        $('body').css('overflow', '');
+      });
+
+      header.css('z-index', '');
+
+    } else {
+
+      drop.show(0, function() {
+        hMenu.addClass('nav--open');
+        header.css('z-index', 100);
+      });
+
+      $('body').css('overflow', 'hidden');
+
+    }
+  });
+
+})();
+
+
+// Preloader
 (function () {
   'use strict';
   var imgs = [];
