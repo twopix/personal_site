@@ -149,16 +149,22 @@
 }
 
 @keyframes foreground {
-  from {
+  0% {
     background: linear-gradient(rgba($firstColor, 0.8), rgba($colorActive, 0.8)) left,
                 linear-gradient(rgba($firstColor, 0.8), rgba($colorActive, 0.8)) right;
     background-size: 0 50%;
     background-repeat: no-repeat; }
-  to {
+  90% {
     background: linear-gradient(rgba($firstColor, 0.8), rgba($colorActive, 0.8)) left,
                 linear-gradient(rgba($firstColor, 0.8), rgba($colorActive, 0.8)) right;
     background-size: 50% 100%;
     background-repeat: no-repeat; }
+
+  100%{
+    background: rgba($firstColor, 0.8);
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+  }
 }
 @keyframes showLinks {
   from {

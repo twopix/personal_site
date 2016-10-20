@@ -41,7 +41,7 @@ ol, ul, blockquote {
 a {
   font-family: $secondfont;
   color: $baselink;
-  text-decoration: underline;
+  text-decoration: none;
   &:hover {
     text-decoration: none;
   }

@@ -126,3 +126,7 @@
     font-size: 1rem;
   }
 }
+.success {
+  @extend .section__title;
+  color: $firstColor;
+}
