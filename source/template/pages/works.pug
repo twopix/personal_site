@@ -95,40 +95,40 @@ block content_footer
 
 
 
-            section.section__line.mainbox
-                form.form-modal.form-modal_callback(name="callback")
-                    .form-modal__blur(data-blur-elem="form")
+            section.contact__form.mainbox
+                form.contact_form.contact_form_callback(name="callback")
+                    .contact_form__blur(data-blur-elem="form")
 
-                    .form-modal__body
-                        .title.form-modal__title Связаться со мной
+                    .contact_form__body
+                        h3.section__title= usrData.pagesTitles.contactme
 
-                        .form-row
-                            input.field.field_full(
+                        label.form-row
+                            input.form-input(
                             type="text"
                             name="name"
-                            placeholder="Имя"
+                            placeholder=`${usrData.form.name}`
                             required
                             )
 
-                        .form-row
-                            input.field.field_full(
+                        label.form-row
+                            input.form-input(
                             type="email"
                             name="email"
-                            placeholder="Email"
+                            placeholder=`${usrData.form.email}`
                             required
                             )
 
-                        .form-row
-                            textarea.field.field_full(
+                        label.form-row
+                            textarea.form-textarea(
                             name="message"
-                            placeholder="Ваше сообщение"
+                            placeholder=`${usrData.form.text}`
                             required
                             pattern="^.{8,100}$"
                             )
 
-                    .form-modal__foot.btn-group.btn-group_equal
-                        .btn-group__item
-                            button.btn.btn_crystal.btn-group__btn(type="submit") Отправить
-                        .btn-group__item
-                            button.btn.btn_crystal.btn-group__btn(type="reset") Очистить
+                    .contact__form_footer.mainbox_footer
+                        .form-item
+                            button.btn.form-button(type="submit")= usrData.form.send
+                        .form-item
+                            button.btn.form-button(type="reset")= usrData.form.cancel
 
