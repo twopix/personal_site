@@ -140,7 +140,10 @@ p {
   }
   &_black {
     color:$SctnTxtColor;
-    margin-bottom: 1.5rem;
+    line-height: 1;
+    width: 30vw;
+    text-align: center;
+    margin: 0 auto 1.5rem;
     &:after{
       background-color: $SctnTxtColor;
     }

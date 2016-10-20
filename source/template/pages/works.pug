@@ -6,8 +6,7 @@ block variables
 block content
     .works__section
         h1.page__title.page__title_black.center= usrData.pagesTitles.portfolio
-        svg.works__title_bgr
-            use(xlink:href="/assets/img/sprite.svg#works_header")
+        +icon('works_header','works__title_bgr')
     section.works__slider.clearfix
         .slider#js-slider
             .slider__desc
@@ -65,38 +64,38 @@ block content
                     data-tools="HTML, CSS, JavaScript, NODE.js, MongoDB"
                     data-link="#3"
                     )
-    section.testinmonials
-        .section__bg(data-blur-container="form")
-        .section__body
-            .testimonials_title.double-title
-                .double-title__text.title Что обо мне говорят
-                svg.double-title__bg.double-title__bg_lg
-                    use(xlink:href='assets/img/sprite.svg#about_header')
+
+block content_footer
+    section.testimonials
+        .testimonials__body
+            .testimonials_title
+                h2.page__title.page__title_black= usrData.pagesTitles.whatsay
+                +icon('about_header','works__title_bgr')
 
             //Testimonials
-            .testimonials_line.testimonials_testimonials-wrap
-                .testimonials
-                    .testimonials__item
-                        .testimonial__content
+            .testimonials__wrap
+                .clearfix
+                    .testimonials__block
+                        .testimonials__avatar
+                            img(src="assets/img/kovalchuk.jpg" alt="Ковальчук Дмитрий" title="Ковальчук Дмитрий")
+                        .testimonials__content
                             p Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                        .testimonial__info
-                            .testimonial__avatar(style="background-image: url(assets/userfiles/user-ava-1.jpg);")
-                            .testimonial__info-who
-                                .testimonial__name Ковальчук Дмитрий
-                                .testimonial__desc основатель Loftchool
+                            .testimonials__person
+                                .testimonials__name Ковальчук Дмитрий
+                                .testimonials__desc --основатель Loftchool
 
-                    .testimonials__item
-                        .testimonial__content
+                    .testimonials__block
+                        .testimonials__avatar
+                            img(src="assets/img/zaharov.jpg" alt="Зар Захаров" title="Зар Захаров")
+                        .testimonials__content
                             p Этот код выдержет любые испытания. Только, пожалуйста, не загружйте сайт в слишком старых браузерах!
-                        .testimonial__info
-                            .testimonial__avatar(style="background-image: url(assets/userfiles/user-ava-2.jpg);")
-                            .testimonial__info-who
-                                .testimonial__name Зар Захаров
-                                .testimonial__desc главный преподаватель
+                            .testimonials__person
+                                .testimonials__name Зар Захаров
+                                .testimonials__desc --главный преподаватель
 
 
 
-            .section__line.mainbox
+            section.section__line.mainbox
                 form.form-modal.form-modal_callback(name="callback")
                     .form-modal__blur(data-blur-elem="form")
 

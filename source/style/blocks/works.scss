@@ -15,7 +15,58 @@
     position: absolute;
     top: 0;
     left: 50%;
+    width: inherit;
+    height: inherit;
     margin-top: 1rem;
     fill: rgba(28, 62, 29, 0.12);
   }
+}
+.testimonials {
+  position: relative;
+  //background: $firstColor url(../img/form-bgr.png) center bottom;
+  background-size: cover;
+
+  &__body {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+
+  }
+  &_title {
+    position: relative;
+  }
+  &__wrap {
+    font-size:0;
+  }
+  &__block{
+    display: inline-block;
+    width: 50%;
+    padding: 0 0.8rem 2rem;
+    vertical-align: top;
+    font-size: 1rem;
+  }
+  &__content {
+
+  }
+  &__avatar {
+    width: 4.875rem;
+    height: 4.875rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  &__content {
+    font-style: italic;
+  }
+  &__person {
+    text-align: center;
+  }
+  &__name{
+    font-weight:bold;
+    color: $colorActive;
+  }
+  &__desc {
+
+  }
+
 }
