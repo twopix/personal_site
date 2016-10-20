@@ -74,7 +74,16 @@
 }
 .contact__form {
   @extend .profile;
+  background: rgba($leftbgColor, 0.8);
   margin: auto;
+  padding: 1rem 0 0;
+  &_body {
+    padding: 0 1rem ;
+  }
+  &_title {
+    padding: 1.25rem 0;
+    max-width: 19rem;
+  }
   &_footer {
     font-size: 0;
   }
@@ -82,6 +91,7 @@
 
 .form {
   &-row {
+
   }
   &-item {
     display: inline-block;

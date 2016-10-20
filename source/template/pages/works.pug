@@ -96,11 +96,9 @@ block content_footer
 
 
             section.contact__form.mainbox
-                form.contact_form.contact_form_callback(name="callback")
-                    .contact_form__blur(data-blur-elem="form")
-
-                    .contact_form__body
-                        h3.section__title= usrData.pagesTitles.contactme
+                form.contact__form_callback(name="callback")
+                    .contact__form_body
+                        h3.contact__form_title.section__title= usrData.pagesTitles.contactme
 
                         label.form-row
                             input.form-input(
