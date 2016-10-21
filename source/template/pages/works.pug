@@ -7,46 +7,49 @@ block content
     .works__section
         h1.page__title.page__title_black.center= usrData.pagesTitles.portfolio
         +icon('works_header','works__title_bgr')
-    section.works__slider.clearfix
-        .slider#js-slider
-            .slider__desc
-                .slider__desc-in
-                    h3.slider__title.title Сайт школы онлайн образования
-                    .slider__info HTML, CSS, JavaScript
 
-                    a.slider__link.btn(href="#404"  target="_blank")
+
+
+    section.works__slider
+        .slider#works-slider
+            .slider__info
+                .slider__info_center
+                    h3.slider__title.section__title Сайт школы онлайн образования
+                    .slider__techs HTML, CSS, JavaScript
+
+                    a.slider__link.btn(href="#"  target="_blank")
                         i.btn__icon.fa.fa-link
                         span.btn__text Посмотреть сайт
 
 
-            .slider__view
+            .slider__image
                 ul.slider__slides.slides
-                    li.slides__item.slides__item_active
-                        img(src="assets/userfiles/work-1.png"  alt="")
-                    li.slides__item
-                        img(src="assets/userfiles/work-2.png"  alt="")
-                    li.slides__item
-                        img(src="assets/userfiles/work-3.png"  alt="")
+                    li.slider__item.flx.slider__item_active
+                        img(src="assets/img/project-1.png"  alt="")
+                    li.slider__item.flx
+                        img(src="assets/img/project-2.png"  alt="")
+                    li.slider__item.flx
+                        img(src="assets/img/project-3.png"  alt="")
 
 
             .slider__controls
-                a.slider__control.slider__control_prev(href="#404"  title="Предыдущий проект")
+                a.slider__control.slider__control_prev(title="Предыдущий проект")
                     ul.slider__slides.slides
-                        li.slides__item
-                            img(src="assets/userfiles/work-1.png"  alt="")
-                        li.slides__item
-                            img(src="assets/userfiles/work-2.png"  alt="")
-                        li.slides__item
-                            img(src="assets/userfiles/work-3.png"  alt="")
+                        li.slider__item
+                            img(src="assets/img/project-1.png"  alt="")
+                        li.slider__item
+                            img(src="assets/img/project-2.png"  alt="")
+                        li.slider__item
+                            img(src="assets/img/project-3.png"  alt="")
 
-                a.slider__control.slider__control_next(href="#404"  title="Следующий проект")
+                a.slider__control.slider__control_next(title="Следующий проект")
                     ul.slider__slides.slides
-                        li.slides__item
-                            img(src="assets/userfiles/work-1.png"  alt="")
-                        li.slides__item
-                            img(src="assets/userfiles/work-2.png"  alt="")
-                        li.slides__item
-                            img(src="assets/userfiles/work-3.png"  alt="")
+                        li.slider__item
+                            img(src="assets/img/project-1.png"  alt="")
+                        li.slider__item
+                            img(src="assets/img/project-2.png"  alt="")
+                        li.slider__item
+                            img(src="assets/img/project-3.png"  alt="")
 
                 ul.slider__data.slider-data
                     li.slider-data__item(

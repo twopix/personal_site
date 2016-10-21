@@ -49,6 +49,15 @@ a {
 p {
   line-height: 1.3rem;
 }
+.btn {
+  background: $firstColor;
+  &:hover {
+    background-color: $colorActive;
+  }
+}
+.fa {
+
+}
 .flx {
   @include flexbox();
 }
@@ -84,6 +93,7 @@ p {
 .main__page {
   max-width: 1200px;
   margin: 0 auto;
+  background: #fbf8f1;
 }
 .wrapper {
   width: 100%;
