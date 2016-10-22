@@ -8,65 +8,9 @@ block content
         h1.page__title.page__title_black.center= usrData.pagesTitles.portfolio
         +icon('works_header','works__title_bgr')
 
+    //slider section
+    include ../blocks/slider.pug
 
-
-    section.works__slider
-        .slider#works-slider
-            .slider__info
-                .slider__info_center
-                    h3.slider__title.section__title Сайт школы онлайн образования
-                    .slider__techs HTML, CSS, JavaScript
-
-                    a.slider__link.btn(href="#"  target="_blank")
-                        i.btn__icon.fa.fa-link
-                        span.btn__text Посмотреть сайт
-
-
-            .slider__image
-                ul.slider__slides.slides
-                    li.slider__item.flx.slider__item_active
-                        img(src="assets/img/project-1.png"  alt="")
-                    li.slider__item.flx
-                        img(src="assets/img/project-2.png"  alt="")
-                    li.slider__item.flx
-                        img(src="assets/img/project-3.png"  alt="")
-
-
-            .slider__controls
-                a.slider__control.slider__control_prev(title="Предыдущий проект")
-                    ul.slider__slides.slides
-                        li.slider__item
-                            img(src="assets/img/project-1.png"  alt="")
-                        li.slider__item
-                            img(src="assets/img/project-2.png"  alt="")
-                        li.slider__item
-                            img(src="assets/img/project-3.png"  alt="")
-
-                a.slider__control.slider__control_next(title="Следующий проект")
-                    ul.slider__slides.slides
-                        li.slider__item
-                            img(src="assets/img/project-1.png"  alt="")
-                        li.slider__item
-                            img(src="assets/img/project-2.png"  alt="")
-                        li.slider__item
-                            img(src="assets/img/project-3.png"  alt="")
-
-                ul.slider__data.slider-data
-                    li.slider-data__item(
-                    data-title="Название 1"
-                    data-tools="HTML, CSS, JavaScript"
-                    data-link="#1"
-                    )
-                    li.slider-data__item(
-                    data-title="Название 2"
-                    data-tools="HTML, CSS, JavaScript, PHP, MySQL"
-                    data-link="#2"
-                    )
-                    li.slider-data__item(
-                    data-title="Название 3"
-                    data-tools="HTML, CSS, JavaScript, NODE.js, MongoDB"
-                    data-link="#3"
-                    )
 
 block content_footer
     section.testimonials

@@ -55,8 +55,8 @@ p {
     background-color: $colorActive;
   }
 }
-.fa {
-
+.btn__icon.fa.fa-link {
+  margin-right: 0.4rem;
 }
 .flx {
   @include flexbox();
@@ -193,4 +193,4 @@ p {
 @import "common/footer";
 @import "common/preloader";
 @import "blocks/about";
-@import "blocks/works";
+@import "pages/works";

@@ -1,0 +1,27 @@
+.section{
+}
+.works {
+  &__section {
+    position: relative;
+    margin-bottom: 5rem;
+  }
+
+  &__title_bgr {
+    transform: translate(-50%, -50%) scale(1.68);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: inherit;
+    height: inherit;
+    margin-top: 1rem;
+    fill: rgba(28, 62, 29, 0.12);
+  }
+}
+//style for slider section
+@import "../blocks/slider";
+
+//style for testimonial section
+@import "../blocks/testimonials";
+
+//style for contact form
+@import "../blocks/contactform";

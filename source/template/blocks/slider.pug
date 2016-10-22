@@ -1,0 +1,57 @@
+section.section--slider
+    .slider#js-slider
+        .slider__desc
+            .slider__desc-in
+                .slider__title.title Сайт школы онлайн образования
+                .slider__info HTML, CSS, JavaScript
+
+                a.slider__link.btn(href="#404"  target="_blank")
+                    i.btn__icon.fa.fa-link
+                    span.btn__text Посмотреть сайт
+
+
+        .slider__view
+            ul.slider__slides.slides
+                li.slides__item.slides__item--active
+                    img(src="assets/img/project-1.png"  alt="")
+                li.slides__item
+                    img(src="assets/img/project-2.png"  alt="")
+                li.slides__item
+                    img(src="assets/img/project-3.png"  alt="")
+
+
+        .slider__controls
+            a.slider__control.slider__control--prev(href="#404"  title="Предыдущий проект")
+                ul.slider__slides.slides
+                    li.slides__item
+                        img(src="assets/img/project-1.png"  alt="")
+                    li.slides__item
+                        img(src="assets/img/project-2.png"  alt="")
+                    li.slides__item
+                        img(src="assets/img/project-3.png"  alt="")
+
+            a.slider__control.slider__control--next(href="#404"  title="Следующий проект")
+                ul.slider__slides.slides
+                    li.slides__item
+                        img(src="assets/img/project-1.png"  alt="")
+                    li.slides__item
+                        img(src="assets/img/project-2.png"  alt="")
+                    li.slides__item
+                        img(src="assets/img/project-3.png"  alt="")
+
+            ul.slider__data.slider-data
+                li.slider-data__item(
+                data-title="Название 1"
+                data-tools="HTML, CSS, JavaScript"
+                data-link="#1"
+                )
+                li.slider-data__item(
+                data-title="O"
+                data-tools="HTML, CSS, JavaScript, PHP, MySQL"
+                data-link="#2"
+                )
+                li.slider-data__item(
+                data-title="Название 3"
+                data-tools="HTML, CSS, JavaScript, NODE.js, MongoDB"
+                data-link="#3"
+                )

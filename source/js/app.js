@@ -308,35 +308,34 @@
 })();
 
 
-// slider
 // Слайдер
 (function() {
   var transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd';
 
   function Slider(options) {
     var gallery     = options.elem;
-    var prev        = gallery.find('.slider__control_prev');
-    var next        = gallery.find('.slider__control_next');
+    var prev        = gallery.find('.slider__control--prev');
+    var next        = gallery.find('.slider__control--next');
 
-    var slides         = gallery.find('.slider__image  .slider__item');
-    var activeSlide    = slides.filter('.slider__item_active');
+    var slides         = gallery.find('.slider__view  .slides__item');
+    var activeSlide    = slides.filter('.slides__item--active');
     var slidesCnt      = slides.length;
     var activeSlideIdx = activeSlide.index();
 
-    var mainSlider = gallery.find('.slider__image  .slides');
-    var mainSlides = mainSlider.find('.slider__item');
+    var mainSlider = gallery.find('.slider__view  .slides');
+    var mainSlides = mainSlider.find('.slides__item');
 
-    var prevSlider = gallery.find('.slider__control_prev .slides');
-    var prevSlides = prevSlider.find('.slider__item');
+    var prevSlider = gallery.find('.slider__control--prev  .slides');
+    var prevSlides = prevSlider.find('.slides__item');
 
-    var nextSlider = gallery.find('.slider__control_next .slides');
-    var nextSlides = nextSlider.find('.slider__item');
+    var nextSlider = gallery.find('.slider__control--next  .slides');
+    var nextSlides = nextSlider.find('.slides__item');
     var isReady    = false;
 
 
-    var desc  = gallery.find('.slider__info');
+    var desc  = gallery.find('.slider__desc');
     var title = desc.find('.slider__title');
-    var tools = desc.find('.slider__techs');
+    var tools = desc.find('.slider__info');
     var link  = desc.find('.slider__link');
 
     var data      = gallery.find('.slider__data');
@@ -354,8 +353,8 @@
 
     function showedSlide(slider, idx) {
       slider
-        .eq(idx).addClass('slider__item_active')
-        .siblings().removeClass('slider__item_active');
+        .eq(idx).addClass('slides__item--active')
+        .siblings().removeClass('slides__item--active');
     }
 
     function dataChange(direction) {
@@ -374,7 +373,7 @@
     }
 
     function changeSlide(slides, direction, className) {
-      var currentSlide    = slides.filter('.slider__item_active');
+      var currentSlide    = slides.filter('.slides__item--active');
       var currentSlideIdx = currentSlide.index();
       var newSlideIdx;
 
@@ -390,14 +389,14 @@
         .one(transitionEnd, function() {
           $(this)
             .removeClass( className )
-            .addClass('slider__item_active')
+            .addClass('slides__item--active')
             .trigger('changed-slide');
         });
 
       currentSlide
         .addClass( className )
         .one(transitionEnd, function() {
-          $(this).removeClass('slider__item_active ' + className);
+          $(this).removeClass('slides__item--active ' + className);
         });
     }
 
@@ -423,7 +422,7 @@
       if( !isReady ) return;
       isReady = false;
 
-      changeAll('prev');
+      changeAll('prev')
       dataChange('prev');
 
       updateDesc(dataItems.eq(activeSlideIdx));
@@ -434,7 +433,7 @@
       if( !isReady ) return;
       isReady = false;
 
-      changeAll('next');
+      changeAll('next')
       dataChange('next');
 
       updateDesc(dataItems.eq(activeSlideIdx));
@@ -446,7 +445,8 @@
 
 
   var slider = new Slider({
-    elem: $('#works-slider')
+    elem: $('#js-slider')
   });
 })();
+
 

@@ -1,0 +1,58 @@
+.contact__form {
+  @extend .profile;
+  background: rgba($leftbgColor, 0.8);
+  margin: auto;
+  padding: 1rem 0 0;
+  &_body {
+    padding: 0 1rem ;
+  }
+  &_title {
+    padding: 1.25rem 0;
+    max-width: 19rem;
+  }
+  &_footer {
+    font-size: 0;
+  }
+}
+
+.form {
+  &-row {
+
+  }
+  &-item {
+    display: inline-block;
+    width: 50%;
+    border-right: 1px solid white;
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  &-input {
+    @extend .login__form__input__group;
+    outline: none;
+    width: 100%;
+    padding-left: 1.5rem;
+    height: 2.81rem;
+    transition: background-color .2s;
+    background-color: rgba(white, 0.85);
+    border: 0;
+    &:focus {
+      background-color: white;
+    }
+  }
+  &-textarea {
+    @extend .form-input;
+    padding-top: 1rem;
+    height: 8.75rem;
+  }
+  &-button {
+    @extend .profile__menu__link;
+    cursor: pointer;
+    border: 0;
+    font-size: 1rem;
+  }
+}
+.success {
+  @extend .section__title;
+  color: $firstColor;
+}
