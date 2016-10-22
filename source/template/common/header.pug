@@ -11,8 +11,13 @@ header.header.header__page
     .header__main
         .profile__avatar_round
             img(src=`${usrData.profileImg}`).profile__avatar__pic
-        h1.page__title= usrData.pagesTitles.blog
-        h3.page__subtitle= usrData.pagesTitles.blogSbt
+
+        if typeof(subtitle) != 'undefined'
+            h2.section__title_subtitle= subtitle
+        else
+            h1.page__title= title
+
+        h3.page__subtitle= tagline
     .header__footer.clearfix
         span.header__footer_btn-down
             a(href="#main").page__next_btn

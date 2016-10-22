@@ -76,9 +76,9 @@ p {
   fill: rgba($basefontColor, 0.96);
   fill-opacity: .5;
   transition: fill-opacity .3s;
-  &:hover{
-    fill: rgba($colorActive, 1);
-  }
+}
+a .icon:hover{
+  fill: rgba($colorActive, 1);
 }
 .container {
   //@include background-grid($color: blue);
@@ -184,6 +184,14 @@ p {
     height: .187rem;
     margin: 0.5rem auto 0 (-5.625rem)/2;
     background-color: CurrentColor;
+  }
+  &_subtitle {
+    @extend .section__title;
+    color: white;
+    margin-bottom: 0;
+    &:after {
+      content: none;
+    }
   }
 }
 @import "blocks/header";

@@ -1,7 +1,9 @@
 extends ../_template_pages
 
 block variables
-    - var title = 'Мои работы'
+    - var title = usrData.profileName
+    - var subtitle = usrData.profileName
+    - var tagline = usrData.profileTitle
 
 block content
     .works__section
@@ -13,67 +15,5 @@ block content
 
 
 block content_footer
-    section.testimonials
-        .testimonials__body
-            .testimonials_title
-                h2.page__title.page__title_black= usrData.pagesTitles.whatsay
-                +icon('about_header','works__title_bgr')
-
-            //Testimonials
-            .testimonials__wrap
-                .clearfix
-                    .testimonials__block
-                        .testimonials__avatar
-                            img(src="assets/img/kovalchuk.jpg" alt="Ковальчук Дмитрий" title="Ковальчук Дмитрий")
-                        .testimonials__content
-                            p Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                            .testimonials__person
-                                .testimonials__name Ковальчук Дмитрий
-                                .testimonials__desc --основатель Loftchool
-
-                    .testimonials__block
-                        .testimonials__avatar
-                            img(src="assets/img/zaharov.jpg" alt="Зар Захаров" title="Зар Захаров")
-                        .testimonials__content
-                            p Этот код выдержет любые испытания. Только, пожалуйста, не загружйте сайт в слишком старых браузерах!
-                            .testimonials__person
-                                .testimonials__name Зар Захаров
-                                .testimonials__desc --главный преподаватель
-
-
-
-            section.contact__form.mainbox
-                form.contact__form-ajax(name="contact__form-ajax" method="post" action="mailer.php")
-                    .contact__form_body
-                        h3.contact__form_title.section__title= usrData.pagesTitles.contactme
-                        #contact__form_response
-                        label.form-row
-                            input.form-input(
-                            type="text"
-                            name="name"
-                            placeholder=`${usrData.form.name}`
-                            required
-                            )#name
-
-                        label.form-row
-                            input.form-input(
-                            type="email"
-                            name="email"
-                            placeholder=`${usrData.form.email}`
-                            required
-                            )#email
-
-                        label.form-row
-                            textarea.form-textarea(
-                            name="message"
-                            placeholder=`${usrData.form.text}`
-                            required
-                            pattern="^.{8,100}$"
-                            )#message
-
-                    .contact__form_footer.mainbox_footer
-                        .form-item
-                            button.btn.form-button(type="submit")= usrData.form.send
-                        .form-item
-                            button.btn.form-button(type="reset")= usrData.form.cancel
+    include ../blocks/testimonials.pug
 
