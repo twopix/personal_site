@@ -8,7 +8,7 @@
     float: left;
     width: 50%;
     height: 100%;
-    padding: 2rem;
+    padding: 1.25rem;
     background: #EFEEE9;
     text-align: center;
 
@@ -23,7 +23,7 @@
     display: inline-block;
     vertical-align: middle;
     width: 100%;
-    max-width: 42rem;
+    max-width: 26.25rem;
     margin: auto;
   }
 
@@ -32,13 +32,13 @@
   }
 
   &__info {
-    padding: 1.3rem 1rem;
-    margin-bottom: 4rem;
+    padding: 0.8rem 0.625rem;
+    margin-bottom: 2.5rem;
     border: 1px solid rgba($colorActive, .3);
     border-left:  none;
     border-right: none;
     color: $colorActive;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
   }
@@ -46,12 +46,12 @@
   &__link {
     color: white;
     padding: 1rem;
-    border-radius: 2rem;
+    border-radius: 1.25rem;
   }
   &__view {
     float: right;
     width: 50%;
-    height: calc(100% - 22.5rem);
+    height: calc(100% - 14.06rem);
     background: #EFEBE0;
     text-align: center;
   }
@@ -68,7 +68,7 @@
     display: inline-block;
     vertical-align: top;
     width: 50%;
-    height: 22.5rem;
+    height: 14.06rem;
     color: white;
     text-align: center;
     background:
@@ -212,7 +212,7 @@
   }
 
   .slider__desc {
-    padding: 5.75% 2rem 8%;
+    padding: 5.75% 1.25rem 8%;
   }
 
   .slider__desc-in {
@@ -230,7 +230,7 @@
 
   .slider__info {
     max-width: 35rem;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.25rem;
   }
 
 
@@ -255,8 +255,7 @@
   }
 }
 
-@include breakpoint($tablet) {
-  //@media screen and (min-width: 769px) and (min-height: 600px) and (orientation: portrait) {
+@media screen and (min-width: 769px) and (min-height: 600px) and (orientation: portrait) {
   .slider {
     height: 600px;
   }
