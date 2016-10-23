@@ -1,3 +1,10 @@
+.blog{
+  position: relative;
+}
+.blog__menu {
+  position: relative;
+  text-align: right;
+}
 .blog__menu__item{
   font-weight: bold;
   color: $textColor;
