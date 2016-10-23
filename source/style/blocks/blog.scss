@@ -1,9 +1,23 @@
 .blog{
   position: relative;
+
+  &--content {
+    box-sizing: border-box;
+  }
 }
 .blog__menu {
   position: relative;
   text-align: right;
+
+  &--sticky{
+    position: fixed;
+    top: 10px;
+  }
+  &--fix-bottom {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 1rem;
+  }
 }
 .blog__menu__item{
   font-weight: bold;

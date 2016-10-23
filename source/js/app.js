@@ -258,6 +258,162 @@
 })();
 //end google maps
 
+// Blog menu
+// Прокрутить страницу до ...
+(function() {
+
+  $(document).on('click', '[data-go]', function(e) {
+    e.preventDefault();
+
+    var btn        = $(this);
+    var target     = btn.attr('data-go');
+    var container  = null;
+
+
+    function scrollToPosition(position, duration) {
+      var position = position || 0;
+      var duration = duration || 1000;
+
+
+      $("body, html").animate({
+        scrollTop: position
+      }, duration);
+    }
+
+
+  });
+
+})();
+
+// sticky-меню на странице блога
+(function() {
+  var container = $('.blog');
+  var menu      = container.find('.blog__menu');
+
+  if (menu.length === 0) return;
+
+  var containerBottom = container.offset().top + container.height() - 40;
+  var edgeTop         = menu.offset().top;
+  var menuHeight      = menu.height();
+
+
+  $(window).on('scroll', function() {
+    if(edgeTop < $(window).scrollTop()) {
+      if(containerBottom < $(window).scrollTop() + menuHeight) {
+        menu
+          .addClass('blog__menu--fix-bottom')
+          .removeClass('blog__menu--sticky');
+      } else {
+        menu
+          .addClass('blog__menu--sticky')
+          .removeClass('blog__menu--fix-bottom');
+      }
+    } else {
+      menu.removeClass('blog__menu--sticky');
+    }
+  });
+
+})();
+
+// Прокрутка до выбранной статьи в блоге
+(function() {
+  var articleAll = $('.blog__article');
+  var linksAll   = $('.blog__menu .menu__link');
+
+  if(articleAll.length === 0) return;
+
+  showSection(window.location.hash, false);
+
+
+  function showSection(section, isAnimate) {
+    var target        = section.replace('#', '');
+    var reqSection    = articleAll.filter('[data-id="' + target + '"]');
+    var duration      = 750;
+
+    if (reqSection.length === 0) return;
+    var reqSectionPos = reqSection.offset().top;
+
+    if(isAnimate) {
+      $('body, html').animate({ scrollTop: reqSectionPos }, duration);
+    } else {
+      $('body, html').scrollTop(reqSectionPos);
+    }
+  }
+
+
+
+  function checkSection() {
+    articleAll.each(function(i, item) {
+      var article    = $(item);
+      var topEdge    = article.offset().top - 200;
+      var bottomEdge = topEdge + article.height();
+      var topScroll  = $(window).scrollTop();
+
+      if (topEdge < topScroll && bottomEdge > topScroll) {
+        var currentId = article.data('id');
+        var reqLink   = linksAll.filter('[href="#' + currentId + '"]');
+
+        reqLink.closest('.blog__menu__item')
+          .addClass('blog__menu__item--active')
+          .siblings()
+          .removeClass('blog__menu__item--active');
+
+        window.location.hash = currentId;
+      }
+    });
+  }
+
+  // Боковавя панель на странице блога
+  (function() {
+    var trigger     = $('.blog__side-trigger');
+    var activeClass = 'blog__side--show';
+    var container;
+
+    if( trigger.length === 0) return;
+
+    container = trigger.closest('.blog__side');;
+
+
+    trigger.on('click', function(e) {
+      e.preventDefault();
+      container.toggleClass( activeClass );
+    });
+
+
+    $(document).on('click', '.blog__menu  .menu__item', function() {
+      var item      = $(this);
+
+      if(item.hasClass('menu__item--active')) return;
+      container.removeClass( activeClass );
+    });
+
+
+    $(window).on('resize', function() {
+      if( $(document).width() >= 960 && container.hasClass( activeClass ) ) {
+        container.removeClass( activeClass );
+      }
+    });
+
+  })();
+
+
+
+
+  $(window).on('scroll', function() {
+    checkSection();
+  });
+
+
+  $(document).on('click', '.blog__menu .menu__link', function(e) {
+    e.preventDefault();
+    showSection($(this).attr('href'), true);
+  });
+
+})();
+
+
+//end blog menu
+
 // mail form
 (function() {
   // Get the form.
