@@ -318,7 +318,7 @@
 // Прокрутка до выбранной статьи в блоге
 (function() {
   var articleAll = $('.blog__article');
-  var linksAll   = $('.blog__menu .menu__link');
+  var linksAll   = $('.blog__menu .blog__menu__link');
 
   if(articleAll.length === 0) return;
 
